@@ -8,59 +8,22 @@ import z from './sounds/Kick (1).wav'
 import x from './sounds/Snare (34).wav'
 import c from './sounds/02 - RimShot [LCJ].wav'
 
-
-const qPad = {
-    name: 'q',
-    src: q,
-    text: "Chord Hit"
+class Pad {
+    constructor(name, src, text) {
+        this.name = name
+        this.src = src
+        this.text = text
+    }
 }
 
-const wPad = {
-    name: 'w',
-    src: w,
-    text: "Snap"
-}
-
-const ePad = {
-    name: "e",
-    src: e,
-    text: "Chant"
-}
-
-const aPad = {
-    name: "a",
-    src: a,
-    text: "Ride"
-}
-
-const sPad = {
-    name: "s",
-    src: s,
-    text: "Open Hat"
-}
-
-const dPad = {
-    name: "d",
-    src: d,
-    text: "Closed Hat"
-}
-
-const zPad = {
-    name: "z",
-    src: z,
-    text: "Kick"
-}
-
-const xPad = {
-    name: "x",
-    src: x,
-    text: "Snare"
-}
-
-const cPad = {
-    name: "c",
-    src: c,
-    text: "Sidestick"
-}
+const qPad = new Pad('q', q, 'Chord Hit')
+const wPad = new Pad('w', w, 'Snap')
+const ePad = new Pad('e', e, 'Chant')
+const aPad = new Pad('a', a, 'Ride')
+const sPad = new Pad('s', s, 'Open Hat')
+const dPad = new Pad('d', d, 'Closed Hat')
+const zPad = new Pad('z', z, 'Kick')
+const xPad = new Pad('x', x, 'Snare')
+const cPad = new Pad('c', c, 'Rimshot')
 
 export const DataBank = [qPad, wPad, ePad, aPad, sPad, dPad, zPad, xPad, cPad]

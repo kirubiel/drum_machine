@@ -13,11 +13,11 @@ function App() {
     audio.play()
   }
 
-  const elementRef = useRef()
+  const focusRef = useRef()
   const padsRef = useRef([])
 
   useEffect(() => {
-    elementRef.current.focus()
+    focusRef.current.focus()
     padsRef.current = padsRef.current.slice(0, DataBank.length)
   })
 
@@ -26,9 +26,6 @@ function App() {
     if(indexOfPad > -1) {
       let audio = padsRef.current[indexOfPad]
       setDisplayText(DataBank[indexOfPad].text)
-      // console.log(displayText)
-      // console.log(indexOfPad)
-      // console.log(DataBank[indexOfPad].text)
       audio.load()
       audio.play()
     }
@@ -37,7 +34,7 @@ function App() {
   return (
     <div id="drum-machine">
       <div className="drum-pads" tabIndex="0"
-        autoFocus={true} ref={elementRef}
+        autoFocus={true} ref={focusRef}
         onBlur={({ target }) => target.focus()}
         onKeyDown={e => playAudioKey(e)}>
         {DataBank.map((pad, i) => <button key={i} id={i} className="drum-pad" onClick={e => playAudio(e, pad.text)}>
