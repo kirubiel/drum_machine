@@ -1,16 +1,17 @@
 import { useRef, useEffect, useState } from 'react'
-import './App.css';
-
-import {DataBank} from './DataBank';
+import './App.css'
+import {DataBank} from './DataBank'
 
 function App() {
   const [displayText, setDisplayText] = useState(null)
+  const [svg, setSVG] = useState(null)
 
-  const playAudio = (e, text) => {
+  const playAudio = (e, text, svg) => {
     let audio = e.target.firstChild
-    setDisplayText(text)
     audio.load()
     audio.play()
+    setDisplayText(text)
+    setSVG(svg)
   }
 
   const focusRef = useRef()
@@ -25,9 +26,18 @@ function App() {
     const indexOfPad = padsRef.current.findIndex(pad => pad.id.toLowerCase() === e.key.toLowerCase())
     if(indexOfPad > -1) {
       let audio = padsRef.current[indexOfPad]
-      setDisplayText(DataBank[indexOfPad].text)
+      audio.parentNode.classList.add("change")
       audio.load()
       audio.play()
+      setDisplayText(DataBank[indexOfPad].text)
+      setSVG(DataBank[indexOfPad].svg)
+    }
+  }
+
+  const removeStyle = e => {
+    const indexOfPad = padsRef.current.findIndex(pad => pad.id.toLowerCase() === e.key.toLowerCase())
+    if(indexOfPad > -1) {
+      padsRef.current[indexOfPad].parentNode.classList.remove("change")
     }
   }
 
@@ -36,13 +46,19 @@ function App() {
       <div className="drum-pads" tabIndex="0"
         autoFocus={true} ref={focusRef}
         onBlur={({ target }) => target.focus()}
-        onKeyDown={e => playAudioKey(e)}>
-        {DataBank.map((pad, i) => <button key={i} id={i} className="drum-pad" onClick={e => playAudio(e, pad.text)}>
+        onKeyDown={e => playAudioKey(e)}
+        onKeyUp={e => removeStyle(e)}>
+        {DataBank.map((pad, i) => <button key={i} id={i} className="drum-pad" onClick={e => playAudio(e, pad.text, pad.svg)}>
           <audio id={pad.name.toUpperCase()} ref={el => padsRef.current[i] = el} className="clip" src={pad.src} preload="none" />
           {pad.name.toUpperCase()}
         </button>)}
       </div>
-      <p id="display">{displayText}</p>
+      <div>
+        <div className="waveform">
+          <img src={svg} alt="" />
+        </div>
+        <p id="display">{displayText}</p>
+      </div>
     </div>
   );
 }

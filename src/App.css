@@ -1,22 +1,81 @@
+@font-face {
+  font-family: Oxygen;
+  src: url(./fonts/Oxygen-Regular.ttf);
+}
+
+@font-face {
+  font-family: Oxygen-Bold;
+  src: url(./fonts/Oxygen-Bold.ttf);
+}
+
+body {
+  font-family: Oxygen;
+  background-color: black;
+  margin: 0 auto;
+}
+
 #root {
   display: flex;
-  align-content: center;
+  height: 100vh;
+  align-items: center;
   justify-content: center;
 }
 
 #drum-machine {
   display: grid;
+  align-content: center;
   justify-content: center;
-  grid-template-columns: auto auto;
-  font-family: 'Times New Roman', Times, serif;
-  /* border: 2px solid black; */
-  background-color: pink;
+  grid-template-columns: auto 1fr;
+  width: 600px;
+  gap: 20px;
+  border: 2px solid white;
+  padding: 20px;
+  height: 290px;
 }
 
-button:focus, #drum-maching:focus {
-  background-color: rgb(115, 141, 141);
+.drum-pads:focus {
+  outline: none;
 }
 
 .drum-pads {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.drum-pad {
+  width: 90px;
+  height: 90px;
+  background-color: rgb(90,140,150);
+  color: white;
+  border-radius: 7px;
+  font-family: Oxygen-Bold;
+  font-size: 19px;
+}
+
+.waveform {
+  width: 100%;
+  background-color: rgb(200,200,200);
+  border-radius: 5px;
+}
+
+img {
+  height: 80px;
+  border: none;
+  padding: 10px;
+}
+
+.drum-pad:active {
+  background-color: rgb(160,120,130);
+  color: white;
+}
+
+.change {
+  background-color: rgb(160,120,130);
+  color: white;
+}
+
+p {
+  margin-top: 10px;
+  color: white;
 }

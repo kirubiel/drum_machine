@@ -1,8 +1,0 @@
-Build basic drum machine that functions like the freecodecamp drum machine
-
-Pass all the tests
-
-Find initial samples
-
-functions
-    - enable the user to add sounds of their own
