@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/drum-machine/static/css/main.441033e2.chunk.css",
+    "main.js": "/drum-machine/static/js/main.8305513c.chunk.js",
+    "main.js.map": "/drum-machine/static/js/main.8305513c.chunk.js.map",
+    "runtime-main.js": "/drum-machine/static/js/runtime-main.71312054.js",
+    "runtime-main.js.map": "/drum-machine/static/js/runtime-main.71312054.js.map",
+    "static/js/2.1aed14da.chunk.js": "/drum-machine/static/js/2.1aed14da.chunk.js",
+    "static/js/2.1aed14da.chunk.js.map": "/drum-machine/static/js/2.1aed14da.chunk.js.map",
+    "static/js/3.df403941.chunk.js": "/drum-machine/static/js/3.df403941.chunk.js",
+    "static/js/3.df403941.chunk.js.map": "/drum-machine/static/js/3.df403941.chunk.js.map",
+    "index.html": "/drum-machine/index.html",
+    "static/css/main.441033e2.chunk.css.map": "/drum-machine/static/css/main.441033e2.chunk.css.map",
+    "static/js/2.1aed14da.chunk.js.LICENSE.txt": "/drum-machine/static/js/2.1aed14da.chunk.js.LICENSE.txt",
+    "static/media/02 - RimShot [LCJ].e0383ada.wav": "/drum-machine/static/media/02 - RimShot [LCJ].e0383ada.wav",
+    "static/media/04 - Snap [LCJ].cf131330.wav": "/drum-machine/static/media/04 - Snap [LCJ].cf131330.wav",
+    "static/media/20inchbell.bbbe7517.wav": "/drum-machine/static/media/20inchbell.bbbe7517.wav",
+    "static/media/Chant.d3a7af69.svg": "/drum-machine/static/media/Chant.d3a7af69.svg",
+    "static/media/Chant_15.bb085f94.wav": "/drum-machine/static/media/Chant_15.bb085f94.wav",
+    "static/media/Chord Hit.ac743ba6.svg": "/drum-machine/static/media/Chord Hit.ac743ba6.svg",
+    "static/media/Closed Hat.930b8b4b.svg": "/drum-machine/static/media/Closed Hat.930b8b4b.svg",
+    "static/media/Hat_Closed_06.40d04e13.wav": "/drum-machine/static/media/Hat_Closed_06.40d04e13.wav",
+    "static/media/Hat_Open_07.fd28e521.wav": "/drum-machine/static/media/Hat_Open_07.fd28e521.wav",
+    "static/media/Kick (1).7980ce1a.wav": "/drum-machine/static/media/Kick (1).7980ce1a.wav",
+    "static/media/Kick.802d391a.svg": "/drum-machine/static/media/Kick.802d391a.svg",
+    "static/media/Open Hat.c304ace6.svg": "/drum-machine/static/media/Open Hat.c304ace6.svg",
+    "static/media/App.css": "/drum-machine/static/media/Oxygen-Regular.9d375dd5.ttf",
+    "static/media/Ride.8fffa6ee.svg": "/drum-machine/static/media/Ride.8fffa6ee.svg",
+    "static/media/Rimshot.203e0340.svg": "/drum-machine/static/media/Rimshot.203e0340.svg",
+    "static/media/Snap.cbf96bd2.svg": "/drum-machine/static/media/Snap.cbf96bd2.svg",
+    "static/media/Snare (34).7df48ea1.wav": "/drum-machine/static/media/Snare (34).7df48ea1.wav",
+    "static/media/Snare.93a05ed3.svg": "/drum-machine/static/media/Snare.93a05ed3.svg",
+    "static/media/sound (20).e6d6cf8c.wav": "/drum-machine/static/media/sound (20).e6d6cf8c.wav"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.71312054.js",
+    "static/js/2.1aed14da.chunk.js",
+    "static/css/main.441033e2.chunk.css",
+    "static/js/main.8305513c.chunk.js"
+  ]
+}
